@@ -203,16 +203,16 @@ const ShaderMaterial = ({
     }
     lastFrameTime = timestamp;
 
-    const material = ref.current.material;
+    const material: any = ref.current.material;
     const timeLocation = material.uniforms.u_time;
     timeLocation.value = timestamp;
   });
 
   const getUniforms = () => {
-    const preparedUniforms = {};
+    const preparedUniforms: any = {};
 
     for (const uniformName in uniforms) {
-      const uniform = uniforms[uniformName];
+      const uniform: any = uniforms[uniformName];
 
       switch (uniform.type) {
         case "uniform1f":
@@ -279,10 +279,10 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-  }, [source, getUniforms]);
+  }, [size.width, size.height, source]);
 
   return (
-    <mesh ref={ref}>
+    <mesh ref={ref as any}>
       <planeGeometry args={[2, 2]} />
       <primitive object={material} attach="material" />
     </mesh>
