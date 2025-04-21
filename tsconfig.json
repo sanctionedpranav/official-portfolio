@@ -23,6 +23,20 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.ts", "types", "src", "components/ui/3d-pin.jsx", "components/ui/PinContainer.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "tailwind.config.ts",
+    "types",
+    "src",
+    "components/ui/3dCard.jsx",
+    "components/ui/PinContainer.tsx",
+    "components/ui/CanvasRevealEffect.jsx",
+    "components/Approach.jsx",
+    "components/RecentProjects.jsx",
+    "data/index.js"
+  ],
   "exclude": ["node_modules"]
 }

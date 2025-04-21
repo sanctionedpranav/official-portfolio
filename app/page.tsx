@@ -6,7 +6,6 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-// import { MacbookScroll } from "@/components/ui/MacBookScroll";
 import { navItems } from "@/data";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
-        {/* <MacbookScroll /> */}
         <RecentProjects />
         <Clients />
         <Experience />

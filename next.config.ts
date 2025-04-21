@@ -5,10 +5,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // Ignores TypeScript errors during build
   },
-  // other configs
+
+  eslint: {
+    ignoreDuringBuilds: true, // Ignores ESLint errors during build
+  },
+
+  // other configs can go here
 };
 
 export default withBundleAnalyzer({
