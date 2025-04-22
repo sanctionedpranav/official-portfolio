@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 w-[80vw] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-[70vw] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >
@@ -88,7 +88,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[90vw] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 md:p-16 md:w-[60vw] dark:border-slate-800 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+            className="relative w-[90vw] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 md:p-16 md:w-[50vw] dark:border-slate-800 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-sm md:text-lg leading-[1.6] font-normal text-neutral-800 dark:text-white">
+              <span className="relative z-20 text-sm md:text-xl leading-[1.6] font-normal text-neutral-800 dark:text-white">
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">

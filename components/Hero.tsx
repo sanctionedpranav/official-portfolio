@@ -5,8 +5,38 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa6'
+import { HiDownload } from "react-icons/hi";
+import toast from 'react-hot-toast';
 
 const Hero = () => {
+  const handleDownload = async () => {
+    const downloading = toast.loading("Preparing your resume...");
+
+    try {
+      const response = await fetch('/Pranav_Resume.pdf');
+
+      if (!response.ok) {
+        throw new Error("File not found");
+      }
+
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = blobUrl;
+      link.download = 'Pranav_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+
+      toast.success("Resume downloaded!", { id: downloading });
+    } catch (error) {
+      console.error("Resume download failed:", error);
+      toast.error("Could not download resume. Please try again.", { id: downloading });
+    }
+  }
+
   return (
     <div className='pb-20 pt-36'>
       <div>
@@ -22,26 +52,38 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
-            Dynamic Web Magic with Next.js
+          <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-96'>
+            Dynamic Web Magic with PIXEL-PERFECT UI IN next.js"
           </h2>
 
           <TextGenerateEffect
             className='text-center text-2xl md:text-5xl lg:text-6xl'
-            words='Transforming Concepts into Seamless User Experiences'
+            words='Transforming Concepts into High-Performance User Experiences'
           />
 
           <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-            Hi, I&apos;m Pranav, a Frontend Developer based in India.
+            Hi, I&apos;m Pranav — a Frontend Engineer building fast, scalable interfaces with React and Next.js.
           </p>
 
-          <a href="#about">
+          <div className="flex flex-col sm:flex-row gap-6 mt-6">
+            <a href="#about">
+              <MagicButton
+                title="Explore My Work"
+                icon={<FaLocationArrow />}
+                position='right'
+                otherClasses="hover:bg-slate-900 transition duration-300"
+
+              />
+            </a>
+
             <MagicButton
-              title="Explore My Work"
-              icon={<FaLocationArrow />}
-              position='right'
+              title="Download Resume"
+              icon={<HiDownload />}
+              position="right"
+              otherClasses="hover:bg-slate-900 transition duration-300"
+              handleClick={handleDownload}
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
