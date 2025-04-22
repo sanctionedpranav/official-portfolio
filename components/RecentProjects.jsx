@@ -12,22 +12,19 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-10 mt-16">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="w-full sm:w-[80%] md:w-[45%] lg:w-[30%] flex justify-center"
-          >
-            <ThreeDCard
-              title={project.title}
-              desc={project.des}
-              img={project.img}
-              href={project.link}
-              iconLists={project.iconLists}
-            />
-          </div>
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
+        {projects.map(({ id, title, des, img, link, iconLists }) => (
+          <ThreeDCard
+            key={id}
+            title={title}
+            desc={des}
+            img={img}
+            href={link}
+            iconLists={iconLists}
+          />
         ))}
       </div>
+
     </section>
   );
 };

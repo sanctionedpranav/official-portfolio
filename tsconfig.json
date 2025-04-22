@@ -36,7 +36,7 @@
     "components/ui/CanvasRevealEffect.jsx",
     "components/Approach.jsx",
     "components/RecentProjects.jsx",
-    "data/index.js"
-  ],
+    "data/index.ts"
+, "components/ui/BentoGrid.jsx", "components/Grid.jsx"  ],
   "exclude": ["node_modules"]
 }

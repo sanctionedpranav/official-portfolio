@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -9,17 +8,14 @@ import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
 
 
-import animationData from "@/data/confetti.json";
-import { BackgroundGradientAnimation } from "./GradientBGg";
+import { BackgroundGradientAnimation } from "../ui/GradientBGg";
 import GridGlobe from "./GridGlobe";
-import MagicButton from "./MagicButton";
+import animationData from "@/data/confetti.json";
+import MagicButton from "../ui/MagicButton";
 
 export const BentoGrid = ({
   className,
   children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
 }) => {
   return (
     <div
@@ -44,15 +40,6 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
-}: {
-  className?: string;
-  id: number;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  img?: string;
-  imgClassName?: string;
-  titleClassName?: string;
-  spareImg?: string;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -139,7 +126,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {/* {id === 2 && <GridGlobe />} */}
+          {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
           {id === 3 && (
