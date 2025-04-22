@@ -10,13 +10,14 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
+import FloatingButtons from "../components/ui/FloatingButtons";
 
 export default function Home() {
-  const [position, setPosition] = useState<'top-right' | 'bottom-center'>('top-right');
+  const [position, setPosition] = useState<'bottom-right' | 'bottom-center'>('bottom-right');
 
   useEffect(() => {
     const updatePosition = () => {
-      setPosition(window.innerWidth < 768 ? 'bottom-center' : 'top-right');
+      setPosition(window.innerWidth < 768 ? 'bottom-center' : 'bottom-right');
     };
 
     updatePosition(); // initial run
@@ -34,9 +35,10 @@ export default function Home() {
             background: "#1e1e2f", // deep slate-indigo (matches dark theme)
             color: "#ffffff",
             border: "1px solid #3b82f6", // soft neon-blue border
-            fontSize: "15px",
-            marginBottom:'8px',
-            marginTop:'8px',
+            fontSize: "18px",
+            padding: '0.8rem 1.6rem',
+            marginBottom: '8px',
+            marginTop: '8px',
           },
           success: {
             iconTheme: {
@@ -52,6 +54,9 @@ export default function Home() {
           },
         }}
       />
+
+      <FloatingButtons />
+
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />

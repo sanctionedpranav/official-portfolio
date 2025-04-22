@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import ClientOnly from "@/components/ClientOnly";
+import SmoothScrollProvider from "@/components/ui/SmoothScroller";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
         <ClientOnly>
+          <SmoothScrollProvider />
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
