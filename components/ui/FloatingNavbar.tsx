@@ -17,9 +17,11 @@ import {
   HiOutlineMail,
 } from "react-icons/hi";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+
 
 export const FloatingNav = ({
   navItems,
@@ -90,9 +92,9 @@ export const FloatingNav = ({
             {/* Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-full bg-slate-900 text-white shadow-md"
+              className="p-3 rounded-full bg-slate-900 text-white shadow-md transition-all duration-150 ease-in-out"
             >
-              {isMenuOpen ? <HiX size={34} /> : <HiOutlineMenu size={34} />}
+              {isMenuOpen ? <HiX size={26} /> : <HiOutlineMenu size={26} />}
             </button>
           </div>
 
@@ -122,7 +124,7 @@ export const FloatingNav = ({
                       <Link
                         key={`link-${idx}`}
                         href={navItem.link}
-                        className="flex items-center gap-3 hover:text-purple transition"
+                        className="flex items-center gap-2 hover:text-purple hover:translate-x-2 transition duration-200 ease-in-out"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <span className="text-xl"><MdKeyboardArrowRight /></span>
@@ -133,29 +135,45 @@ export const FloatingNav = ({
 
                   {/* Socials */}
                   <div className="mt-6 border-t border-gray-700 pt-5">
-                    <p className="text-sm mb-2">Follow us on</p>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        className="text-white bg-slate-800 p-2 rounded-md hover:bg-sky-600 transition"
-                      >
-                        <FaLinkedin size={20} />
-                      </a>
-                      <a
-                        href="https://x.com"
-                        target="_blank"
-                        className="text-white bg-slate-800 p-2 rounded-md hover:bg-pink-600 transition"
-                      >
-                        <FaXTwitter size={20} />
-                      </a>
-                      <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        className="text-white bg-slate-800 p-2 rounded-md hover:bg-fuchsia-600 transition"
-                      >
-                        <FaInstagram size={20} />
-                      </a>
+                    <p className="text-sm mb-3">Useful links...</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex gap-4">
+                        <a
+                          href="https://www.linkedin.com/in/sanctionedpranav/"
+                          target="_blank"
+                          className="text-white bg-slate-800 p-2 rounded-md hover:bg-sky-600 transition"
+                        >
+                          <FaLinkedin size={20} />
+                        </a>
+                        <a
+                          href="https://github.com/sanctionedpranav"
+                          target="_blank"
+                          className="text-white bg-slate-800 p-2 rounded-md hover:bg-fuchsia-600 transition"
+                        >
+                          <FaGithub size={20} />
+                        </a>
+                      </div>
+
+                      <div className="flex items-center gap-4">
+                        {/* WhatsApp Button */}
+                        <a
+                          href="https://wa.me/919996633422?text=Hi%20Pranav,%20I%20visited%20your%20portfolio."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-slate-800 hover:bg-green-600 text-white p-2 rounded-md transition"
+                        >
+                          <FaWhatsapp size={20} />
+                        </a>
+
+                        {/* Call Button */}
+                        <a
+                          href="tel:+919996633422"
+                          target="_blank"
+                          className="bg-slate-800 hover:bg-blue-600 text-white p-2 rounded-md transition"
+                        >
+                          <FaPhoneAlt size={18} />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

@@ -107,66 +107,60 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Pranav was a seamless experience. He was instrumental in building reusable UI systems using Tailwind and React, and always prioritized accessibility and performance. His understanding of modern frontend architecture — from routing in Next.js to state management in Redux — made him an irreplaceable part of the development team. I'd trust him with any production frontend system.",
+    name: "Simran Kaur",
+    title: "Frontend Lead at Hostinger",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Pranav brought a lot of stability to our codebase. He writes clean, modular components and always considers scalability in his approach. He’s someone who quietly solves hard problems and makes the overall development process more predictable.",
+    name: "Ravi Ahuja",
+    title: "Senior Software Engineer at AvalonTribe",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I appreciated Pranav’s ability to break down frontend tasks into actionable components. He was especially good at handling edge cases and making sure the user experience stayed smooth even under dynamic data or unusual flows.",
+    name: "Neeraj Kulkarni",
+    title: "Product Engineer at Docker",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Pranav worked with us on a Next.js project that had strict performance and accessibility targets. His contributions helped us meet our Core Web Vitals goals without compromising on visual fidelity. He takes feedback well and works collaboratively.",
+    name: "Ishita Joshi",
+    title: "Project Manager at Appwrite",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "What I liked most about working with Pranav was his consistency. Whether it was a layout issue or integrating a third-party library, he approached it methodically and always delivered working solutions. A very dependable team member.",
+    name: "Rahul Babu",
+    title: "Tech Lead at Accenture",
   },
 ];
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "AvalonTribe",
+    img: "/avalonTribe.png",
+    nameImg: "/avalonTribepng.svg",
   },
   {
     id: 2,
     name: "appwrite",
-    img: "/app.svg",
+    img: "/NIC.png",
     nameImg: "/appName.svg",
   },
   {
     id: 3,
     name: "HOSTINGER",
-    img: "/host.svg",
+    img: "/orangemantra.png",
     nameImg: "/hostName.svg",
   },
   {
     id: 4,
     name: "stream",
-    img: "/s.svg",
+    img: "/magicedtech.svg",
     nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
   },
 ];
 
