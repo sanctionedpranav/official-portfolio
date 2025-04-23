@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import ClientOnly from "@/components/ClientOnly";
-import SmoothScrollProvider from "@/components/ui/SmoothScroller";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Pranav's Portfolio",
   description: "Modern & Minimalist Frontend Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,9 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta name="theme-color" content="#111827" />
+      </head>
       <body className={`${inter.className}`}>
         <ClientOnly>
-          <SmoothScrollProvider />
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -35,5 +42,6 @@ export default function RootLayout({
         </ClientOnly>
       </body>
     </html>
+
   );
 }

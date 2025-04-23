@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { DateTime } from "luxon";
 import {
   HiOutlineMenu,
   HiX,
@@ -38,6 +39,7 @@ export const FloatingNav = ({
   const [visible, setVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [clock, setClock] = useState("--:--:--");
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -57,6 +59,15 @@ export const FloatingNav = ({
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const dt = DateTime.now().setZone("Asia/Kolkata");
+      const formatted = dt.toFormat("EEE, dd LLL yyyy | HH:mm:ss z");
+      setClock(formatted);
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const menuAnimation = {
@@ -96,6 +107,10 @@ export const FloatingNav = ({
             >
               {isMenuOpen ? <HiX size={26} /> : <HiOutlineMenu size={26} />}
             </button>
+
+            <div className="text-xs sm:text-sm font-mono text-white/80 whitespace-nowrap">
+              {clock}
+            </div>
           </div>
 
           <AnimatePresence>

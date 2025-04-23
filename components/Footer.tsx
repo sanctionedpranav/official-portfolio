@@ -9,7 +9,7 @@ import MagicButton from './ui/MagicButton'
 
 const Footer = () => {
   return (
-    <footer className='w-full mb-[100px] md:mb-5 pb-10' id='contact'>
+    <footer className='w-full md:mb-5 pb-10' id='contact'>
       <div className='flex flex-col items-center'>
         <h2 className='heading lg:max-w-[45vw]'>
           Let’s elevate <span className='text-purple'>your frontend</span> — clean, fast, and crafted for impact.
