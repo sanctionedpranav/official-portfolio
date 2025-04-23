@@ -12,14 +12,8 @@ import { DateTime } from "luxon";
 import {
   HiOutlineMenu,
   HiX,
-  HiOutlineHome,
-  HiOutlineUser,
-  HiOutlineDocumentText,
-  HiOutlineMail,
 } from "react-icons/hi";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
-import { MdOutlineDarkMode } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 

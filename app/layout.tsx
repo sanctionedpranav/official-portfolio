@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import ClientOnly from "@/components/ClientOnly";
-
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -30,6 +30,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#111827" />
       </head>
       <body className={`${inter.className}`}>
+        <Analytics />
         <ClientOnly>
           <ThemeProvider
             attribute="class"
