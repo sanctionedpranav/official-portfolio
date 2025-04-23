@@ -16,11 +16,6 @@ export default function Home() {
   const [position, setPosition] = useState<'bottom-right' | 'bottom-center'>('bottom-right');
 
   useEffect(() => {
-    fetch("/api/notify", { method: "POST" });
-  }, []);
-
-
-  useEffect(() => {
     const updatePosition = () => {
       setPosition(window.innerWidth < 768 ? 'bottom-center' : 'bottom-right');
     };
