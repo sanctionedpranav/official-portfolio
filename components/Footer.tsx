@@ -1,7 +1,8 @@
 'use client';
 
 import { socialMedia } from '@/data'
-import Image from 'next/image'
+import { motion } from "motion/react";
+
 import React from 'react'
 import { FaLocationArrow } from 'react-icons/fa6'
 import MagicButton from './ui/MagicButton'
@@ -10,37 +11,50 @@ const Footer = () => {
   return (
     <footer className='w-full mb-[100px] md:mb-5 pb-10' id='contact'>
       <div className='flex flex-col items-center'>
-        <h1 className='heading lg:max-w-[45vw]'>
-          Ready to take <span className='text-purple'>your</span> digital presence to the next level
-        </h1>
+        <h2 className='heading lg:max-w-[45vw]'>
+          Let’s elevate <span className='text-purple'>your frontend</span> — clean, fast, and crafted for impact.
+        </h2>
 
         <p className='text-white-200 md:mt-10 my-5 text-center'>
-          Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
+          Open to collaboration, freelance work, and long-term roles. Let’s build something users love.
         </p>
 
         <a href="mailto:pranavs0208@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
-            position='right'
+            position="right"
           />
+
         </a>
 
       </div>
 
-      <div className='flex mt-16 md:flex-row flex-col justify-between items-center'>
-        <p className='md:text-base text-sm md:font-normal font-light'>
-          Copyright © 2025 Pranav
-        </p>
+      <div className='flex mt-16 md:flex-row flex-col justify-between items-center w-full'>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className='md:text-base text-sm md:font-normal font-light text-center md:text-left'
+        >
+          © 2025 Pranav — Built with dedication & clean code
+        </motion.p>
 
-        <div className='flex items-center md:gap-3 gap-6 py-5'>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className='flex items-center md:gap-4 gap-6 py-5'
+        >
           {socialMedia?.map((profile) => (
-            <a
+            <motion.a
               key={profile.id}
               href={profile.link}
               target='_blank'
               rel='noopener noreferrer'
-              className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300'
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className='group w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-70 bg-[#111827] hover:bg-[#1f2937] rounded-lg border border-white/10 transition duration-300 relative'
             >
               <img
                 src={profile.img}
@@ -48,10 +62,14 @@ const Footer = () => {
                 width={20}
                 height={20}
               />
-            </a>
+              <span className='absolute -top-8 scale-0 group-hover:scale-100 transition duration-300 bg-white text-black text-xs font-medium px-2 py-1 rounded shadow-lg z-50'>
+                {profile.label}
+              </span>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
+
     </footer>
   )
 }

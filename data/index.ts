@@ -199,16 +199,46 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    label: 'Github',
     link: "https://github.com/sanctionedpranav", // Replace with your actual GitHub URL
   },
-  // {
-  //   id: 2,
-  //   img: "/twit.svg",
-  //   link: "https://twitter.com/pranav", // Replace with your Twitter/X URL
-  // },
   {
     id: 2,
     img: "/link.svg",
+    label: 'LinkedIn',
     link: "https://linkedin.com/in/sanctionedpranav", // Replace with your LinkedIn URL
+  },
+];
+
+export const approachSteps = [
+  {
+    phase: "Phase 1",
+    title: "Understanding Requirements",
+    description:
+      "I begin with product discovery and tech assessment — defining scope, setting expectations, and translating business goals into frontend architecture.",
+    bg: "bg-gradient-to-br from-[#1f1b3a] to-[#3c2677]",
+    animationSpeed: 5.1,
+    colors: undefined,
+  },
+  {
+    phase: "Phase 2",
+    title: "Design Systems & Development",
+    description:
+      "I architect modular, performant UIs with React, Tailwind, and Next.js — prioritizing accessibility, scalability, and code maintainability from the start.",
+    bg: "bg-gradient-to-br from-[#2b0a3d] to-[#8e2de2]",
+    animationSpeed: 3,
+    colors: [
+      [236, 72, 153],
+      [232, 121, 249],
+    ],
+  },
+  {
+    phase: "Phase 3",
+    title: "Testing, Feedback & Handoff",
+    description:
+      "I ensure smooth deployment, bug fixes, and responsive feedback loops — handing over clean code and docs, and staying available for iterations.",
+    bg: "bg-gradient-to-br from-[#083344] to-[#0ea5e9]",
+    animationSpeed: 3,
+    colors: [[125, 211, 252]],
   },
 ];
