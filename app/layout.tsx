@@ -27,7 +27,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#111827" />
       </head>
       <body className={`${inter.className}`}>
         <Analytics />

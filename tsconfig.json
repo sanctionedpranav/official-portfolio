@@ -37,6 +37,6 @@
     "components/Approach.jsx",
     "components/RecentProjects.jsx",
     "data/index.ts"
-, "components/ui/BentoGrid.jsx", "components/Grid.jsx"  ],
+, "components/ui/BentoGrid.jsx", "components/Grid.jsx", "components/Experience.jsx"  ],
   "exclude": ["node_modules"]
 }

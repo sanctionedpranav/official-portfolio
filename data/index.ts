@@ -167,45 +167,90 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Developer - AvalonTribe Infotech",
+    desc: "Led UI development from scratch using React.js and Redux Saga for performance-focused products.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
+    modalContent: {
+      paragraph:
+        "At AvalonTribe, I played a key role in building robust frontend systems for large-scale web applications. My work directly impacted the delivery speed and quality of multiple projects, particularly in creating scalable admin panels and managing complex states using Redux Saga.",
+      responsibilities: [
+        "Developed modular, reusable components using React.js and TailwindCSS across 4+ projects.",
+        "Built a fully functional Admin Panel, improving user management workflows by 40%.",
+        "Integrated RESTful APIs using Express.js and Node.js for seamless frontend-backend communication.",
+        "Reduced development cycles by 30% through component reuse and Tailwind design consistency.",
+        "Streamlined Git workflows and deployment processes, minimizing version conflicts and bugs.",
+      ],
+    },
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "UI Developer - National Informatics Centre (NIC)",
+    desc: "Redesigned government-facing portals with performance-first approach and clean accessibility standards.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
+    modalContent: {
+      paragraph:
+        "As part of NIC (via Velocis Systems), I contributed to government web infrastructure by revamping critical UI systems, focusing on responsive design and WCAG compliance. My work helped improve accessibility and data representation across multiple devices.",
+      responsibilities: [
+        "Revamped a key government dashboard, improving load performance and UI structure.",
+        "Used React.js to engineer high-performance UIs with dynamic data visualization components.",
+        "Ensured accessibility and responsiveness across all screen sizes for public-facing applications.",
+        "Designed and implemented dynamic widgets to enhance user interactivity and engagement.",
+        "Boosted usability metrics by 15% by restructuring UX flow and improving clarity of content.",
+      ],
+    },
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Frontend Developer - OrangeMantra Pvt. Ltd.",
+    desc: "Contributed to 3+ live projects including full redesign of the company website for better UX.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
+    modalContent: {
+      paragraph:
+        "At OrangeMantra, I worked on multiple enterprise projects, ensuring delivery of responsive, high-performance web pages. I also led the UI overhaul of the corporate website to align with branding and user experience standards.",
+      responsibilities: [
+        "Redesigned OrangeMantra’s official site, integrating new UI components and interactions.",
+        "Enhanced website loading speed by 30% using image optimization and lazy-loading.",
+        "Applied performance optimization techniques such as memoization and dynamic imports.",
+        "Worked with stakeholders to gather frontend requirements and rapidly deploy feature updates.",
+        "Used Git for version control to manage sprint-based releases across teams.",
+      ],
+    },
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Web Developer - Magic Software (Stratosphere IT)",
+    desc: "Developed scalable React applications and transitioned legacy systems to component-based architecture.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+    modalContent: {
+      paragraph:
+        "During my time at Magic Software (via Stratosphere IT), I transformed traditional monolithic pages into modern React-based systems, enhancing maintainability, cross-device compatibility, and user satisfaction.",
+      responsibilities: [
+        "Migrated legacy UI codebases to modular, component-driven React applications.",
+        "Improved app performance by 30% by reducing re-renders and optimizing component hierarchy.",
+        "Implemented responsive layouts for maximum usability on desktop, tablet, and mobile.",
+        "Collaborated with QA and backend teams to ensure consistent delivery pipelines.",
+        "Used SVN Tortoise for versioning and deployment, streamlining release cycles.",
+      ],
+    },
   },
 ];
+
 
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    label: 'Github',
+    label: "Github",
     link: "https://github.com/sanctionedpranav", // Replace with your actual GitHub URL
   },
   {
     id: 2,
     img: "/link.svg",
-    label: 'LinkedIn',
+    label: "LinkedIn",
     link: "https://linkedin.com/in/sanctionedpranav", // Replace with your LinkedIn URL
   },
 ];

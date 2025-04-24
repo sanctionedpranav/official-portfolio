@@ -58,7 +58,7 @@ export const FloatingNav = ({
   useEffect(() => {
     const interval = setInterval(() => {
       const dt = DateTime.now().setZone("Asia/Kolkata");
-      const formatted = dt.toFormat("EEE, dd LLL yyyy | HH:mm:ss z");
+      const formatted = dt.toFormat("HH:mm:ss");
       setClock(formatted);
     }, 1000);
     return () => clearInterval(interval);
@@ -88,7 +88,8 @@ export const FloatingNav = ({
     <>
       {isMobile ? (
         <>
-          <div className="fixed top-5 right-5 z-[6000] flex items-center gap-3">
+          <div className="fixed top-5 left-0 right-0 z-[6000] px-4 sm:px-6 flex items-center justify-between max-w-full overflow-hidden">
+
             {/* Theme Toggle Placeholder */}
             {/* <button className="p-2 rounded-full border border-white/20 bg-[#1a1a1a] text-white hover:bg-white/10">
               <MdOutlineDarkMode size={20} />
@@ -97,12 +98,12 @@ export const FloatingNav = ({
             {/* Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-full bg-slate-900 text-white shadow-md transition-all duration-150 ease-in-out"
+              className="p-3 rounded-fullshadow-2xl border border-white/10 backdrop-blur-md rounded-full bg-[rgba(17,25,40,0.65)] text-white shadow-md transition-all duration-150 ease-in-out"
             >
-              {isMenuOpen ? <HiX size={26} /> : <HiOutlineMenu size={26} />}
+              {isMenuOpen ? <HiX size={28} /> : <HiOutlineMenu size={28} />}
             </button>
 
-            <div className="text-xs sm:text-sm font-mono text-white/80 whitespace-nowrap">
+            <div className="text-xs sm:text-lg font-bold rounded-fullshadow-2xl border border-white/10 backdrop-blur-md rounded-full bg-[rgba(17,25,40,0.65)] py-3 px-5 font-mono text-white/80 whitespace-nowrap">
               {clock}
             </div>
           </div>
