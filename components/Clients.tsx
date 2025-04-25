@@ -5,6 +5,8 @@ import React from "react";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCard";
 
+import { motion } from "motion/react";
+
 const Clients = () => {
   return (
     <section id="testimonials" className="py-20">
@@ -24,25 +26,28 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-20 w-14"
-                />
-                {/* <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
-                /> */}
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
+        <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="w-full max-w-7xl grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-10 p-6 sm:p-10 rounded-2xl border border-white/10 bg-[rgba(17,25,40,0.45)] backdrop-blur-xl shadow-lg"
+      >
+        {companies.map((company) => (
+          <div
+            key={company.id}
+            className="flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <img
+              src={company.img}
+              alt={company.name}
+              aria-label={company.name}
+              loading="lazy"
+              className={`object-contain ${company.customClassName}`}
+            />
+          </div>
+        ))}
+      </motion.div>
       </div>
     </section>
   );

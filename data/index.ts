@@ -140,29 +140,30 @@ export const testimonials = [
 export const companies = [
   {
     id: 1,
-    name: "AvalonTribe",
-    img: "/avalonTribe.png",
-    nameImg: "/avalonTribepng.svg",
+    name: 'AvalonTribe',
+    img: '/avalonTribe.png',
+    customClassName: 'w-20 sm:w-28',
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/NIC.png",
-    nameImg: "/appName.svg",
+    name: 'National Informatics Centre (NIC)',
+    img: '/nic-logo.svg',
+    customClassName: 'w-24 sm:w-64',
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/orangemantra.png",
-    nameImg: "/hostName.svg",
+    name: 'OrangeMantra',
+    img: '/orangemantra-logo.svg',
+    customClassName: 'w-28 sm:w-56 invert',
   },
   {
     id: 4,
-    name: "stream",
-    img: "/magicedtech.svg",
-    nameImg: "/streamName.svg",
+    name: 'Magic EdTech',
+    img: '/magicedtech.svg',
+    customClassName: 'w-24 sm:w-28',
   },
 ];
+
 
 export const workExperience = [
   {
@@ -238,7 +239,6 @@ export const workExperience = [
     },
   },
 ];
-
 
 export const socialMedia = [
   {
