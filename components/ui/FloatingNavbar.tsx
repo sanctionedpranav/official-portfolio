@@ -32,6 +32,7 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); // NEW
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [clock, setClock] = useState("--:--:--");
 
@@ -51,6 +52,7 @@ export const FloatingNav = ({
       setIsMobile(window.innerWidth < 1024);
     };
     handleResize();
+    setIsMounted(true); // <- Set mounted true after first client render
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -63,6 +65,10 @@ export const FloatingNav = ({
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   const menuAnimation = {
     hidden: { opacity: 0, y: "-100%", scaleY: 0.8 },
