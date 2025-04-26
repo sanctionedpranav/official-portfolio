@@ -26,28 +26,52 @@ export default function ThreeDCard({ title, href, desc, img, iconLists }) {
           <img
             src={img}
             alt={title}
-            className="w-full h-48 object-contain rounded-xl group-hover/card:shadow-xl transition-all duration-300"
+            className="w-full h-56 object-cover rounded-xl group-hover/card:shadow-2xl transition-all duration-300"
           />
         </CardItem>
 
-        {/* Tech Stack & Button */}
-        <div className="flex items-center justify-between mt-6">
+        {/* Tech Stack & Buttons */}
+        <div className="flex flex-col md:flex-row items-center justify-between mt-6 gap-4">
+          {/* Tech Stack */}
           <div className="flex items-center gap-2">
             {iconLists?.map((icon, index) => (
-              <img key={index} src={icon} alt="tech-icon" className="w-6 h-6" />
+              <img
+                key={index}
+                src={icon}
+                alt="tech-icon"
+                className="w-6 h-6 hover:scale-110 transition-transform duration-300 ease-in-out"
+              />
             ))}
           </div>
-          <CardItem
-            as="a"
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            translateZ={20}
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-semibold hover:opacity-90 transition-opacity"
-          >
-            Visit site
-          </CardItem>
+
+          {/* Action Buttons */}
+          <div className="flex gap-3">
+            {/* Visit Site Button */}
+            <CardItem
+              as="a"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              translateZ={30}
+              className="px-5 py-2 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-white text-xs font-semibold shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300"
+            >
+              Visit Site
+            </CardItem>
+
+            {/* Get Code Button */}
+            <CardItem
+              as="a"
+              href="https://github.com/" // <-- replace with your project repo link
+              target="_blank"
+              rel="noopener noreferrer"
+              translateZ={30}
+              className="px-5 py-2 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-semibold shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
+            >
+              Get Code
+            </CardItem>
+          </div>
         </div>
+
       </CardBody>
 
     </CardContainer>
