@@ -3,12 +3,12 @@
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
-export default function ThreeDCard({ title, href, desc, img, iconLists }) {
+export default function ThreeDCard({ title, href, desc, img, iconLists, getCodeLink }) {
   return (
     <CardContainer className="inter-var w-full">
-      <CardBody className="flex flex-col gap-4 h-full w-full rounded-xl py-8 px-12 border border-black/[0.1] dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1] dark:hover:shadow-2xl transition-shadow duration-300 ease-in-out group/card">
+      <CardBody className="flex flex-col gap-4 h-full w-full rounded-xl py-8 px-6 md:px-12 border border-black/[0.1] dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1] dark:hover:shadow-2xl transition-shadow duration-300 ease-in-out group/card">
         {/* Title */}
-        <CardItem translateZ="50" className="text-lg md:text-xl font-semibold text-neutral-800 dark:text-white">
+        <CardItem translateZ="50" className="text-xl md:text-2xl font-semibold text-neutral-800 dark:text-white">
           {title}
         </CardItem>
 
@@ -26,7 +26,7 @@ export default function ThreeDCard({ title, href, desc, img, iconLists }) {
           <img
             src={img}
             alt={title}
-            className="w-full h-56 object-cover rounded-xl group-hover/card:shadow-2xl transition-all duration-300"
+            className="w-full h-56 object-cover rounded-xl group-hover/card:shadow-2xl transition-all duration-300 rotate-2"
           />
         </CardItem>
 
@@ -53,22 +53,26 @@ export default function ThreeDCard({ title, href, desc, img, iconLists }) {
               target="_blank"
               rel="noopener noreferrer"
               translateZ={30}
-              className="px-5 py-2 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-white text-xs font-semibold shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300"
+              className="px-5 py-2 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-semibold shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
             >
               Visit Site
             </CardItem>
 
             {/* Get Code Button */}
-            <CardItem
-              as="a"
-              href="https://github.com/" // <-- replace with your project repo link
-              target="_blank"
-              rel="noopener noreferrer"
-              translateZ={30}
-              className="px-5 py-2 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-semibold shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
-            >
-              Get Code
-            </CardItem>
+            {
+              getCodeLink && (
+                <CardItem
+                  as="a"
+                  href={getCodeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  translateZ={30}
+                  className="px-5 py-2 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-semibold shadow-lg hover:shadow-cyan-400/50 hover:scale-105 transition-all duration-300"
+                >
+                  Get Code
+                </CardItem>
+              )
+            }
           </div>
         </div>
 

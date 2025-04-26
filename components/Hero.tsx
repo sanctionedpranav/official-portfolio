@@ -38,7 +38,7 @@ const Hero = () => {
   }
 
   return (
-    <div className='pb-20 pt-36'>
+    <div className='pb-10 pt-36'>
       <div>
         <Spotlight className='-top-40 -left-10 md:-top-20 md:-left-32 h-screen' fill='white' />
         <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='purple' />
@@ -50,10 +50,10 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
       </div>
 
-      <div className="flex justify-center relative md:my-20 z-10">
+      <div className="flex justify-center relative md:mt-20 md:mb-10 z-10">
         <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[80vw] flex flex-col items-center justify-center gap-3 md:gap-0'>
           <h2 className='uppercase tracking-widest text-sm text-center text-blue-100 max-w-96'>
-            Dynamic Web Magic with PIXEL-PERFECT UI IN next.js"
+            Dynamic Web Magic with PIXEL-PERFECT UI IN next.js
           </h2>
 
           <TextGenerateEffect
@@ -61,7 +61,7 @@ const Hero = () => {
             words='Transforming Concepts into High-Performance User Experiences'
           />
 
-          <p className=' max-w-6xl text-center md:tracking-wider mb-4 text-md md:text-lg lg:text-2xl md:mt-4'>
+          <p className='max-w-6xl text-center md:tracking-wider mb-4 text-md md:text-lg lg:text-2xl md:mt-4'>
             Hi, I&apos;m <span className="text-purple font-bold">Pranav Sharma</span> — a Frontend Engineer building fast, scalable interfaces with <span className='text-purple'>React.js and Next.js</span>.
           </p>
 
