@@ -50,19 +50,29 @@ export const CardContainer = ({
   };
 
   useEffect(() => {
+    let animId: number;
     const animate = () => {
       if (!containerRef.current) return;
 
-      rotation.current.x += (targetRotation.current.x - rotation.current.x) * 0.1;
-      rotation.current.y += (targetRotation.current.y - rotation.current.y) * 0.1;
+      const dx = targetRotation.current.x - rotation.current.x;
+      const dy = targetRotation.current.y - rotation.current.y;
 
-      containerRef.current.style.transform = `rotateX(${rotation.current.x}deg) rotateY(${rotation.current.y}deg)`;
-
-      requestAnimationFrame(animate);
+      if (isMouseEntered || Math.abs(dx) > 0.02 || Math.abs(dy) > 0.02) {
+        rotation.current.x += dx * 0.1;
+        rotation.current.y += dy * 0.1;
+        containerRef.current.style.transform = `rotateX(${rotation.current.x}deg) rotateY(${rotation.current.y}deg)`;
+        animId = requestAnimationFrame(animate);
+      } else {
+        rotation.current.x = targetRotation.current.x;
+        rotation.current.y = targetRotation.current.y;
+        containerRef.current.style.transform = `rotateX(${rotation.current.x}deg) rotateY(${rotation.current.y}deg)`;
+      }
     };
 
-    animate();
-  }, []);
+    animId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animId);
+  }, [isMouseEntered]);
 
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
@@ -122,8 +132,8 @@ export const CardItem = ({
   rotateZ = 0,
   ...rest
 }: {
-  as?: React.ElementType;
-  children: React.ReactNode;
+  as?: any;
+  children?: React.ReactNode;
   className?: string;
   translateX?: number | string;
   translateY?: number | string;
@@ -149,14 +159,16 @@ export const CardItem = ({
     }
   };
 
+  const Component = (Tag || "div") as any;
+
   return (
-    <Tag
+    <Component
       ref={ref}
       className={cn("w-fit transition-all duration-500 ease-in-out", className)}
       {...rest}
     >
       {children}
-    </Tag>
+    </Component>
   );
 };
 

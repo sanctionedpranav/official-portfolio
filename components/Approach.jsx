@@ -1,22 +1,32 @@
 "use client";
 import React from "react";
-
+import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "motion/react";
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 import { approachSteps } from "@/data";
+
+const CanvasRevealEffect = dynamic(
+  () => import("./ui/CanvasRevealEffect").then((mod) => mod.CanvasRevealEffect),
+  { ssr: false }
+);
 
 export function Approach() {
   return (
-    <section className="w-full py-20">
+    <section id="approach" className="w-full py-20 section-defer">
       <h1 className="heading">
         My <span className="text-purple">Approach</span>
       </h1>
       <div
         className="my-20 flex flex-col lg:flex-row items-center gap-4">
         {approachSteps?.map(({ phase, title, description, bg, animationSpeed, colors }) => (
-          <Card key={title} title={title} icon={<AceternityIcon order={phase} />} description={description} >
-            <CanvasRevealEffect animationSpeed={animationSpeed} containerClassName={bg} colors={colors} />
-          </Card>
+          <Card
+            key={title}
+            title={title}
+            icon={<AceternityIcon order={phase} />}
+            description={description}
+            animationSpeed={animationSpeed}
+            containerClassName={bg}
+            colors={colors}
+          />
         ))}
       </div>
     </section>
@@ -27,7 +37,9 @@ const Card = ({
   title,
   description,
   icon,
-  children
+  animationSpeed,
+  containerClassName,
+  colors,
 }) => {
   const [hovered, setHovered] = React.useState(false);
   return (
@@ -44,8 +56,13 @@ const Card = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="h-full w-full absolute inset-0">
-            {children}
+            <CanvasRevealEffect
+              animationSpeed={animationSpeed}
+              containerClassName={containerClassName}
+              colors={colors}
+            />
           </motion.div>
         )}
       </AnimatePresence>

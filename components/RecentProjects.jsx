@@ -27,7 +27,7 @@ const RecentProjects = () => {
     currentPage * cardsPerPage + cardsPerPage
   );
   return (
-    <section className="py-20 px-4">
+    <section id="projects" className="py-20 px-4 section-defer">
       <h2 className="text-center text-3xl md:text-4xl font-bold">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>

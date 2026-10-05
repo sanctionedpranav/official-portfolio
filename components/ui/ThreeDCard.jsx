@@ -26,6 +26,8 @@ export default function ThreeDCard({ title, href, desc, img, iconLists, getCodeL
           <img
             src={img}
             alt={title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-56 object-cover rounded-xl group-hover/card:shadow-2xl transition-all duration-300 rotate-2"
           />
         </CardItem>
@@ -39,6 +41,8 @@ export default function ThreeDCard({ title, href, desc, img, iconLists, getCodeL
                 key={index}
                 src={icon}
                 alt="tech-icon"
+                loading="lazy"
+                decoding="async"
                 className="w-6 h-6 hover:scale-110 transition-transform duration-300 ease-in-out"
               />
             ))}

@@ -107,6 +107,11 @@ body {
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  .section-defer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto none auto 600px;
+  }
 }
 
 @layer base {

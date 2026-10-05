@@ -19,7 +19,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 section-defer">
       <h1 className="heading">
         My <span className="text-purple">Work Experience</span>
       </h1>
@@ -38,6 +38,8 @@ const Experience = () => {
               <img
                 src={card?.thumbnail}
                 alt={`${card?.title} icon`}
+                loading="lazy"
+                decoding="async"
                 className="lg:w-32 md:w-20 w-16"
               />
               <div className="lg:ms-5">

@@ -9,7 +9,7 @@ import MagicButton from './ui/MagicButton'
 
 const Footer = () => {
   return (
-    <footer className='w-full md:mb-5 pb-10' id='contact'>
+    <footer className='w-full md:mb-5 pb-10 section-defer' id='contact'>
       <div className='flex flex-col items-center'>
         <h2 className='heading lg:max-w-[45vw]'>
           Let’s elevate <span className='text-purple'>your frontend</span> — clean, fast, and crafted for impact.
@@ -59,6 +59,8 @@ const Footer = () => {
               <img
                 src={profile.img}
                 alt={`social-${profile.id}`}
+                loading="lazy"
+                decoding="async"
                 width={20}
                 height={20}
               />

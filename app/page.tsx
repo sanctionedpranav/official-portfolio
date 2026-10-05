@@ -1,16 +1,19 @@
-'use client'
-import Approach from "@/components/Approach";
-import Clients from "@/components/Clients";
-import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
-import Grid from "@/components/Grid";
+'use client';
+
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
-import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
-import { useEffect, useState } from "react";
-import { Toaster } from "react-hot-toast";
-import FloatingButtons from "../components/ui/FloatingButtons";
+
+const Grid = dynamic(() => import("@/components/Grid"));
+const RecentProjects = dynamic(() => import("@/components/RecentProjects"));
+const Clients = dynamic(() => import("@/components/Clients"));
+const Experience = dynamic(() => import("@/components/Experience"));
+const Approach = dynamic(() => import("@/components/Approach"), { ssr: false });
+const Footer = dynamic(() => import("@/components/Footer"));
+const FloatingButtons = dynamic(() => import("../components/ui/FloatingButtons"), { ssr: false });
+const Toaster = dynamic(() => import("react-hot-toast").then((mod) => mod.Toaster), { ssr: false });
 
 export default function Home() {
   const [position, setPosition] = useState<'bottom-right' | 'bottom-center'>('bottom-right');
