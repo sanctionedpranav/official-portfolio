@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { DateTime } from "luxon";
 import {
   HiOutlineMenu,
   HiX,
@@ -42,7 +41,7 @@ export const FloatingNav = ({
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-        direction < 0 ? setVisible(true) : setVisible(false);
+        setVisible(direction < 0);
       }
     }
   });
@@ -58,11 +57,20 @@ export const FloatingNav = ({
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const dt = DateTime.now().setZone("Asia/Kolkata");
-      const formatted = dt.toFormat("HH:mm:ss");
+    const updateTime = () => {
+      const now = new Date();
+      const formatted = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).format(now);
       setClock(formatted);
-    }, 1000);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
 

@@ -112,6 +112,27 @@ body {
     content-visibility: auto;
     contain-intrinsic-size: auto none auto 600px;
   }
+
+  /* Sleek custom scrollbar for modals & content panels */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(203, 172, 249, 0.35);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(203, 172, 249, 0.65);
+  }
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(203, 172, 249, 0.35) rgba(255, 255, 255, 0.04);
+  }
 }
 
 @layer base {

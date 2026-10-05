@@ -4,7 +4,8 @@ import { projects } from "@/data";
 import React, { useState } from "react";
 import ThreeDCard from "./ui/ThreeDCard";
 import MagicButton from "./ui/MagicButton";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
+import { motion } from "framer-motion";
 
 
 const RecentProjects = () => {
@@ -46,35 +47,71 @@ const RecentProjects = () => {
           />
         ))}
 
-        <div className="col-span-full flex items-start justify-center gap-10">
-          <MagicButton
-            title="Previous"
-            icon={<FaArrowLeft />}
-            position='left'
-            handleClick={handlePrevious}
-            otherClasses="hover:bg-slate-900 transition duration-300 !text-lg px-7"
+        {/* Pagination & Catalog Depth Controls */}
+        <div className="col-span-full w-full flex flex-col items-center justify-center gap-4 mt-8">
+          {/* Page Indicator & Navigation Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            {/* Previous Button */}
+            <button
+              onClick={handlePrevious}
+              disabled={currentPage === 0}
+              aria-label="Previous Page"
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl border font-medium text-sm transition-all duration-300 ${
+                currentPage === 0
+                  ? "border-white/[0.05] bg-white/[0.02] text-neutral-600 cursor-not-allowed"
+                  : "border-white/[0.1] bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.08] hover:border-purple/40 shadow-sm"
+              }`}
+            >
+              <FaArrowLeft className="text-xs" />
+              <span>Previous</span>
+            </button>
 
-          />
-          <MagicButton
-            title="Next"
-            icon={<FaArrowRight />}
-            position='right'
-            handleClick={handleNext}
-            otherClasses="hover:bg-slate-900 transition duration-300 !text-lg px-7"
+            {/* Interactive Page Pills with Smooth Gliding Glassmorphic Indicator */}
+            <div className="relative flex items-center gap-1 bg-[#0b0e27]/85 p-1.5 rounded-full border border-white/15 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.15)]">
+              {Array.from({ length: totalPages }).map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentPage(idx)}
+                  aria-label={`Go to page ${idx + 1}`}
+                  aria-current={currentPage === idx ? "page" : undefined}
+                  className={`relative h-9 w-9 rounded-full font-semibold text-sm transition-colors duration-200 flex items-center justify-center z-10 ${
+                    currentPage === idx
+                      ? "text-white"
+                      : "text-neutral-400 hover:text-white"
+                  }`}
+                >
+                  {currentPage === idx && (
+                    <motion.div
+                      layoutId="activePagePill"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      className="absolute inset-0 rounded-full bg-white/[0.14] border border-white/30 backdrop-blur-md shadow-[0_0_16px_rgba(255,255,255,0.15),inset_0_1px_2px_rgba(255,255,255,0.35)]"
+                    />
+                  )}
+                  <span className="relative z-20">{idx + 1}</span>
+                </button>
+              ))}
+            </div>
 
-          />
-          {/* <button
-            onClick={handlePrevious}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-          >
-            Previous
-          </button>
-          <button
-            onClick={handleNext}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-          >
-            Next
-          </button> */}
+            {/* Next Button */}
+            <button
+              onClick={handleNext}
+              disabled={currentPage === totalPages - 1}
+              aria-label="Next Page"
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl border font-medium text-sm transition-all duration-300 ${
+                currentPage === totalPages - 1
+                  ? "border-white/[0.05] bg-white/[0.02] text-neutral-600 cursor-not-allowed"
+                  : "border-white/[0.1] bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.08] hover:border-purple/40 shadow-sm"
+              }`}
+            >
+              <span>Next</span>
+              <FaArrowRight className="text-xs" />
+            </button>
+          </div>
+
+          {/* Project Count Indicator */}
+          <span className="text-xs font-medium text-neutral-400 tracking-wide">
+            Showing <span className="text-white font-semibold">{currentPage * cardsPerPage + 1}–{Math.min((currentPage + 1) * cardsPerPage, projects.length)}</span> of <span className="text-white font-semibold">{projects.length}</span> featured projects
+          </span>
         </div>
       </div>
 
