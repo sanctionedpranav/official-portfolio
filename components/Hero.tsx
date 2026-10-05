@@ -62,7 +62,7 @@ const Hero = () => {
           />
 
           <p className='max-w-6xl text-center md:tracking-wider mb-4 text-md md:text-lg lg:text-2xl md:mt-4'>
-            Hi, I&apos;m <span className="text-purple font-bold">Pranav Sharma</span> — a Frontend Engineer building fast, scalable interfaces with <span className='text-purple'>React.js and Next.js</span>.
+            Hi, I&apos;m <span className="text-purple font-bold">Pranav Sharma</span> — a Full-Stack Developer building fast, scalable interfaces with <span className='text-purple'>React.js and Next.js</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 mt-6">
