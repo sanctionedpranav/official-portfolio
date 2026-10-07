@@ -11,7 +11,7 @@ const FloatingButtons = () => {
 
   const handleCopy = (e) => {
     e.stopPropagation();
-    const currentUrl = typeof window !== "undefined" ? window.location.href : "https://pranav-portfolio.vercel.app";
+    const currentUrl = typeof window !== "undefined" ? window.location.href : "https://pranav-portfolio-woad.vercel.app";
     navigator.clipboard.writeText(currentUrl);
     setCopied(true);
     toast.success("Portfolio link copied to clipboard!");

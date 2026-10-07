@@ -13,6 +13,7 @@ const Experience = dynamic(() => import("@/components/Experience"));
 const Approach = dynamic(() => import("@/components/Approach"), { ssr: false });
 const Footer = dynamic(() => import("@/components/Footer"));
 const FloatingButtons = dynamic(() => import("../components/ui/FloatingButtons"), { ssr: false });
+const BackToTop = dynamic(() => import("../components/ui/BackToTop"), { ssr: false });
 const Toaster = dynamic(() => import("react-hot-toast").then((mod) => mod.Toaster), { ssr: false });
 
 export default function Home() {
@@ -69,6 +70,7 @@ export default function Home() {
         <Approach />
         <Footer />
         <FloatingButtons />
+        <BackToTop />
       </div>
     </main>
   );

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://sanctionedpranav.vercel.app/sitemap.xml',
+    sitemap: 'https://pranav-portfolio-woad.vercel.app/sitemap.xml',
   };
 }

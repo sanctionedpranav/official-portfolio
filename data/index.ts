@@ -75,9 +75,10 @@ export const projects = [
     title: "Crafting a Modern Developer Portfolio",
     des: "Designed and developed a modern, responsive portfolio showcasing projects, skills, and professional milestones with stunning UI/UX animations.",
     img: "/portfolio.webp",
-    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg",],
+    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg"],
     link: "https://pranav-portfolio-woad.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/official-portfolio',
+    categories: ["nextjs", "production"],
   },
   {
     id: 11,
@@ -87,8 +88,8 @@ export const projects = [
     iconLists: ["/next.svg", "/react.svg", "/javascript.svg", "/ts.svg", "/tail.svg"],
     link: "https://student.brain-mentors.com/",
     getCodeLink: "https://github.com/sanctionedpranav/brainmentors-new",
+    categories: ["production", "nextjs"],
   },
-
   {
     id: 12,
     title: "Typing Master",
@@ -97,8 +98,8 @@ export const projects = [
     iconLists: ["/react.svg", "/javascript.svg", "/ts.svg", "/tail.svg"],
     link: "https://typingmaster-roan.vercel.app/",
     getCodeLink: "https://github.com/sanctionedpranav/typingmaster",
+    categories: ["interactive", "nextjs"],
   },
-
   {
     id: 13,
     title: "Skillrisers",
@@ -107,8 +108,8 @@ export const projects = [
     iconLists: ["/react.svg", "/javascript.svg", "/ts.svg", "/tail.svg"],
     link: "https://skillrisers.com/",
     getCodeLink: "https://github.com/sanctionedpranav/skillrisers",
+    categories: ["production", "nextjs"],
   },
-
   {
     id: 14,
     title: "Brain Mentors",
@@ -117,24 +118,27 @@ export const projects = [
     iconLists: ["/next.svg", "/react.svg", "/ts.svg", "/tail.svg"],
     link: "https://brain-mentors.com/",
     getCodeLink: "",
+    categories: ["production", "nextjs"],
   },
   {
     id: 2,
     title: "YouTube Clone with API Integration",
     des: "Built a scalable YouTube clone application by integrating dynamic API calls, video search, channel pages, and adaptive video streaming with a focus on performance.",
     img: "/youtube.webp",
-    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg",],
+    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg"],
     link: "https://youtube-clone-chi-rosy.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/youtube-clone',
+    categories: ["production", "nextjs"],
   },
   {
     id: 3,
     title: "Immersive Gaming Website with GSAP Animations",
     des: "Created an immersive gaming website with GSAP animations and interactive transitions, delivering high-frame-rate performance and next-gen visual storytelling.",
     img: "/gaming-page.webp",
-    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg", , "/gsap.svg"],
+    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg", "/gsap.svg"],
     link: "https://razer-gaming.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/razer-gaming',
+    categories: ["interactive", "nextjs"],
   },
   {
     id: 4,
@@ -144,24 +148,27 @@ export const projects = [
     iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg", "/three.svg"],
     link: "https://3d-shop-design.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/3d-shop-design',
+    categories: ["interactive"],
   },
   {
     id: 5,
     title: "Knockout Brand Landing Page — Built for Conversions",
     des: "Crafted a sleek and high-conversion landing page for the Knockout brand, combining responsive layouts, smooth scroll, and high-speed performance optimizations.",
     img: "/knockout-page.webp",
-    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg",],
+    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg"],
     link: "https://knockout-landing-page.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/knockout-landing-page',
+    categories: ["production", "nextjs"],
   },
   {
     id: 6,
     title: "Hostingpari. A secure place to host your website.",
     des: "Crafted a sleek and high-conversion landing page for the Hostingpari, combining responsive layouts, smooth scroll, and high-speed performance optimizations.",
     img: "/hosting-pari.png",
-    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg",],
+    iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg"],
     link: "https://hostingpari.com/",
     getCodeLink: 'https://github.com/sanctionedpranav/hostingpariassignment',
+    categories: ["production", "nextjs"],
   },
   {
     id: 7,
@@ -171,6 +178,7 @@ export const projects = [
     iconLists: ["/re.svg", "/next.svg", "/react-router.svg", "/tail.svg", "/javascript.svg", "/ts.svg"],
     link: "https://matrimonial-delta.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/matrimonial',
+    categories: ["production", "nextjs"],
   },
   {
     id: 8,
@@ -180,6 +188,7 @@ export const projects = [
     iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/ts.svg", "/tail.svg", "/bootstrap.svg"],
     link: "https://pizza-app-rust-beta.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/javascript-apps/tree/main/pizza-application',
+    categories: ["production"],
   },
   {
     id: 9,
@@ -189,6 +198,7 @@ export const projects = [
     iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/ts.svg", "/tail.svg", "/bootstrap.svg"],
     link: "https://to-do-three-lilac.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/javascript-apps/tree/main/to-do',
+    categories: ["production"],
   },
   {
     id: 10,
@@ -198,6 +208,7 @@ export const projects = [
     iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/ts.svg", "/tail.svg", "/bootstrap.svg"],
     link: "https://tictactoe-updated-code.vercel.app/",
     getCodeLink: 'https://github.com/sanctionedpranav/tictactoe-updated-code/tree/main/Adv_TicTacToe',
+    categories: ["interactive"],
   },
 ];
 

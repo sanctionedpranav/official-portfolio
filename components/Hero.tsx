@@ -170,6 +170,7 @@ const Hero = () => {
             <div
               className="relative w-full max-w-4xl h-[88vh] bg-[#0b0e27] border border-white/15 rounded-3xl shadow-[0_0_50px_rgba(139,92,246,0.3)] flex flex-col overflow-hidden"
               onClick={(e) => e.stopPropagation()}
+              data-lenis-prevent
             >
               {/* Modal Top Toolbar */}
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-[#080b21]/95 backdrop-blur-md">

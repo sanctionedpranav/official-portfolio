@@ -142,7 +142,7 @@ const Experience = () => {
                   </div>
 
                   {/* Scrollable Content Body */}
-                  <div className="flex-1 overflow-y-auto overscroll-contain p-6 sm:p-8 space-y-5 custom-scrollbar">
+                  <div className="flex-1 overflow-y-auto overscroll-contain p-6 sm:p-8 space-y-5 custom-scrollbar" data-lenis-prevent>
                     {workExperience[selected]?.modalContent?.paragraph && (
                       <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/5">
                         <h4 className="text-xs font-semibold uppercase tracking-wider text-purple mb-1.5">Overview</h4>
