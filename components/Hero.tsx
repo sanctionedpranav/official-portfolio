@@ -85,17 +85,17 @@ const Hero = () => {
             </span>
           </div>
 
-          <h2 className='uppercase tracking-widest text-sm text-center text-blue-100 max-w-96'>
-            Dynamic Web Magic with PIXEL-PERFECT UI IN next.js
+          <h2 className='uppercase tracking-widest text-sm text-center text-blue-100 max-w-xl'>
+            Full-Stack Architecture & Modern Web Experiences
           </h2>
 
           <TextGenerateEffect
             className='text-center text-3xl md:text-5xl lg:text-6xl'
-            words='Transforming Concepts into High-Performance User Experiences'
+            words='Transforming Ideas into High-Performance Full-Stack Applications'
           />
 
           <p className='max-w-6xl text-center md:tracking-wider mb-4 text-md md:text-lg lg:text-2xl md:mt-4'>
-            Hi, I&apos;m <span className="text-purple font-bold">Pranav Sharma</span> — a Full-Stack Developer building fast, scalable interfaces with <span className='text-purple'>React.js and Next.js</span>.
+            Hi, I&apos;m <span className="text-purple font-bold">Pranav Sharma</span> — a Full Stack Developer building scalable, end-to-end web applications with <span className='text-purple'>Next.js, Node.js, TypeScript & Modern UI</span>.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6">

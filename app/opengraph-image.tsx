@@ -6,7 +6,7 @@ export const size = {
 };
 
 export const contentType = 'image/png';
-export const alt = 'Pranav Sharma — Frontend Developer & UI Engineer';
+export const alt = 'Pranav Sharma — Full Stack Developer & Software Engineer';
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -87,7 +87,7 @@ export default function OpenGraphImage() {
               margin: 0,
             }}
           >
-            Frontend Developer & UI Engineer
+            Full Stack Developer & Software Engineer
           </p>
           <p
             style={{
@@ -98,13 +98,13 @@ export default function OpenGraphImage() {
               lineHeight: 1.4,
             }}
           >
-            Crafting high-performance modern web apps with React, Next.js, TypeScript & 3D Interactive Design.
+            Crafting scalable end-to-end web apps with Next.js, React, Node.js, TypeScript & 3D Interactive Design.
           </p>
         </div>
 
         {/* Bottom Tech Pills */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-          {['React.js', 'Next.js 15', 'TypeScript', 'Tailwind CSS', 'Three.js', 'GSAP', 'Redux'].map(
+          {['Next.js 15', 'React.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'Express.js', 'Three.js'].map(
             (skill) => (
               <div
                 key={skill}

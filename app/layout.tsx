@@ -11,18 +11,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pranav-portfolio-woad.vercel.app'),
-  title: "Pranav Sharma | Frontend Developer & UI Engineer",
+  title: "Pranav Sharma | Full Stack Developer & Software Engineer",
   description:
-    "Explore the portfolio of Pranav Sharma — Frontend Developer specializing in React, Next.js, TypeScript, Three.js, and high-performance modern web applications.",
+    "Explore the portfolio of Pranav Sharma — Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, Three.js, and high-performance scalable web applications.",
   authors: [{ name: "Pranav Sharma" }],
   keywords: [
     "Pranav Sharma",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Portfolio",
-    "UI/UX Engineer",
+    "Full Stack Developer",
     "Software Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "TypeScript",
     "Web Developer",
+    "Frontend & Backend Engineer",
   ],
   icons: {
     icon: "/favicon.ico",
@@ -30,9 +32,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Pranav Sharma | Frontend Developer & UI Engineer",
+    title: "Pranav Sharma | Full Stack Developer & Software Engineer",
     description:
-      "Frontend Developer specializing in React, Next.js, TypeScript, and high-performance modern web experiences.",
+      "Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and high-performance modern web experiences.",
     url: "https://pranav-portfolio-woad.vercel.app",
     siteName: "Pranav Sharma Portfolio",
     images: [
@@ -48,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pranav Sharma | Frontend Developer & UI Engineer",
+    title: "Pranav Sharma | Full Stack Developer & Software Engineer",
     description:
-      "Frontend Developer specializing in React, Next.js, TypeScript, and high-performance modern web experiences.",
+      "Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, and high-performance modern web experiences.",
     images: ["/portfolio.webp"],
   },
 };
@@ -75,9 +77,9 @@ export default function RootLayout({
                   "@id": "https://pranav-portfolio-woad.vercel.app/#person",
                   name: "Pranav Sharma",
                   url: "https://pranav-portfolio-woad.vercel.app",
-                  jobTitle: "Frontend Developer & UI Engineer",
+                  jobTitle: "Full Stack Developer & Software Engineer",
                   description:
-                    "Frontend Developer specializing in React, Next.js, TypeScript, Three.js, and high-performance modern web experiences.",
+                    "Full Stack Developer specializing in React, Next.js, Node.js, TypeScript, Three.js, and scalable web applications.",
                   image: "https://pranav-portfolio-woad.vercel.app/profile.svg",
                   sameAs: [
                     "https://github.com/sanctionedpranav",
@@ -85,30 +87,34 @@ export default function RootLayout({
                     "https://instagram.com/sanctionedpranav",
                   ],
                   knowsAbout: [
+                    "Full Stack Development",
                     "React.js",
                     "Next.js",
+                    "Node.js",
+                    "Express.js",
                     "TypeScript",
                     "JavaScript",
+                    "REST APIs",
                     "Tailwind CSS",
                     "GSAP",
                     "Three.js",
                     "Redux Saga",
                     "Framer Motion",
                     "Web Performance Optimization",
-                    "Responsive Web Design",
+                    "Scalable Architecture",
                   ],
                   worksFor: {
                     "@type": "Organization",
-                    name: "Frontend & Full Stack Engineering",
+                    name: "Full Stack Software Engineering",
                   },
                 },
                 {
                   "@type": "WebSite",
                   "@id": "https://pranav-portfolio-woad.vercel.app/#website",
                   url: "https://pranav-portfolio-woad.vercel.app",
-                  name: "Pranav Sharma — Frontend Portfolio",
+                  name: "Pranav Sharma — Full Stack Portfolio",
                   description:
-                    "Official Portfolio of Pranav Sharma — Frontend Developer & UI Engineer",
+                    "Official Portfolio of Pranav Sharma — Full Stack Developer & Software Engineer",
                   publisher: {
                     "@id": "https://pranav-portfolio-woad.vercel.app/#person",
                   },

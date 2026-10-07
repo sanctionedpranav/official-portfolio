@@ -29,8 +29,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My frontend stack.",
-    description: "React.js, Next.js, TypeScript, Redux, Tailwind, GSAP. .",
+    title: "My full-stack toolkit.",
+    description: "Next.js, React, Node.js, TypeScript, Express, REST APIs, Tailwind, Three.js.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -39,8 +39,8 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "User-focused engineering.",
-    description: "I build performant, accessible, scalable web interfaces.",
+    title: "Full-stack problem solving.",
+    description: "I build performant, accessible, scalable end-to-end web applications.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -391,16 +391,16 @@ export const approachSteps = [
     phase: "Phase 1",
     title: "Understanding Requirements",
     description:
-      "I begin with product discovery and tech assessment — defining scope, setting expectations, and translating business goals into frontend architecture.",
+      "I begin with product discovery and tech assessment — defining scope, setting expectations, and translating business goals into scalable software architecture.",
     bg: "bg-gradient-to-br from-[#1f1b3a] to-[#3c2677]",
     animationSpeed: 5.1,
     colors: undefined,
   },
   {
     phase: "Phase 2",
-    title: "Design Systems & Development",
+    title: "Full-Stack Development & Architecture",
     description:
-      "I architect modular, performant UIs with React, Tailwind, and Next.js — prioritizing accessibility, scalability, and code maintainability from the start.",
+      "I architect end-to-end applications with Next.js, React, Node.js, and modern APIs — prioritizing performance, clean databases, and code maintainability from the start.",
     bg: "bg-gradient-to-br from-[#2b0a3d] to-[#8e2de2]",
     animationSpeed: 3,
     colors: [

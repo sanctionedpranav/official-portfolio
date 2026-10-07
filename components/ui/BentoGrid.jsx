@@ -45,8 +45,8 @@ export const BentoGridItem = ({
   titleClassName,
   spareImg,
 }) => {
-  const leftLists = ["ReactJS", "NextJS", "Typescript", "Javascript", "Redux", 'JEST', 'VITE', 'Git + GitHub/GitLab'];
-  const rightLists = ['GSAP', "Tailwind", "Bootstrap", "Material UI", 'Aceternity UI', 'Framer Motion'];
+  const leftLists = ["Next.js", "React.js", "Node.js", "TypeScript", "Express.js", "REST APIs", "Redux", "Git/GitHub"];
+  const rightLists = ["MongoDB/SQL", "GSAP", "Tailwind CSS", "Three.js", "Framer Motion", "Jest"];
 
   const [copied, setCopied] = useState(false);
   const [animationData, setAnimationData] = useState(null);
